@@ -44,18 +44,13 @@ const esExito = manejarErrores(errores) === 0
 if(esExito){
     $form.className='oculto'
     //es este de aca si pongo document.querySelector(#exito).className ='' ->si funciona pero de esta manera no
-<<<<<<< HEAD
-    document.querySelector("#exito").className=''
-=======
     //$form.exito.className=''
->>>>>>> 784f516b0cd0812e855aa2acbb5517f6f1a81405
 }
-
 event.preventDefault();
 }
 
 function manejarErrores(errores){
-removerErroresAnteriores()
+//removerErroresAnteriores()
 const keys = Object.keys(errores);
 const $errores = document.querySelector('#errores');
 let cantErrores = 0;
@@ -72,14 +67,9 @@ keys.forEach(function(key){
         $errores.appendChild($error);
     }else{
         $form[key].className='';
-<<<<<<< HEAD
-        
-        
-        
-=======
-        //y aca trato de remover solo los que tienen la clase igual que el key que se la puse anteriormente pero se que hay un error
-        //$errores[key].remove()
->>>>>>> 784f516b0cd0812e855aa2acbb5517f6f1a81405
+        //---y aca trato de remover solo los que tienen la clase igual que el key que se la puse anteriormente pero se que hay un error
+        //const borrarError = document.querySelector(`.${key}`)
+        //borrarError.remove()
     };
 });
 
@@ -107,12 +97,12 @@ return cantErrores
 
 }
 
-  function removerErroresAnteriores (){
- const $errores =  document.querySelector('#errores')
-  while ($errores.firstChild) {
-     $errores.removeChild($errores.firstChild);
-    }
+//   function removerErroresAnteriores (){
+//  const $errores =  document.querySelector('#errores')
+//   while ($errores.firstChild) {
+//      $errores.removeChild($errores.firstChild);
+//     }
 
- }
+//  }
 const $form = document.querySelector("#carta-a-santa");
 $form.onsubmit = validarFormulario;
