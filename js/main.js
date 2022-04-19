@@ -50,7 +50,7 @@ event.preventDefault();
 }
 
 function manejarErrores(errores){
-//removerErroresAnteriores()
+removerErroresAnteriores()
 const keys = Object.keys(errores);
 const $errores = document.querySelector('#errores');
 let cantErrores = 0;
@@ -97,12 +97,12 @@ return cantErrores
 
 }
 
-//   function removerErroresAnteriores (){
-//  const $errores =  document.querySelector('#errores')
-//   while ($errores.firstChild) {
-//      $errores.removeChild($errores.firstChild);
-//     }
+   function removerErroresAnteriores (){
+  const $errores =  document.querySelector('#errores')
+   while ($errores.firstChild) {
+      $errores.removeChild($errores.firstChild);
+     }
 
-//  }
+  }
 const $form = document.querySelector("#carta-a-santa");
 $form.onsubmit = validarFormulario;
