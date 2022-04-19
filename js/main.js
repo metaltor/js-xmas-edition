@@ -69,7 +69,7 @@ keys.forEach(function(key){
     }else{
         $form[key].className='';
         //y aca trato de remover solo los que tienen la clase igual que el key que se la puse anteriormente pero se que hay un error
-        $errores[key].remove()
+        //$errores[key].remove()
     };
 });
 return cantErrores
