@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main-mio.css"/>
+    <title>mi Tarea 6</title>
+</head>
+<body>
+
+<form id="calculador-edades">
+    <label for="cantidad-integrantes">Ingrese la cantidad de integrantes</label>
+    <input type="number" id="cantidad-integrantes"/>
+    <button type="submit" id="siguiente-paso">Siguiente</button>
+
+    <div id="integrantes">
+        
+    </div>
+
+    <button type="button" id="calcular" class="oculto">Calcular</button>
+
+    <button type="reset" id="resetear">Resetear</button>
+    <button type="button" id="agregar-salarios" class="oculto">Agregar salarios</button>
+
+    <div id="analisis" class="oculto">
+        <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
+        <p>La menor edad es: <strong id="menor-edad"></strong></p>
+        <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+    </div>
+
+   
+</form>
+    <form id="calculador-salarios" class="oculto">
+        <p>Agrega los salarios de los integrantes de tu familia</p>
+        <button type="button" id="calcular-salarios">Calcular Salarios</button>
+        <button type="reset" id="volver-inicio">Inicio</button>
+        <div id="salarios"></div>
+        
+        <div id="analisis-salario" class="oculto">
+            <p>el mayor salario es: <strong id="mayor-salario"></strong></p>
+            <p>el menor salario es:<strong id="menor-salario"></strong></p>
+            <p>el promedio de salarios es: <strong id="promedio-salario"></strong> </p>
+            <p>el promedio mensual de los salarios es: <strong id="promedio-mensual-salario"></strong></p>
+        </div>
+
+
+    </form>
+    <script src="tarea-clase-6.js"></script>
+</body>
+</html>
