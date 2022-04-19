@@ -44,7 +44,7 @@ const esExito = manejarErrores(errores) === 0
 if(esExito){
     $form.className='oculto'
     //es este de aca si pongo document.querySelector(#exito).className ='' ->si funciona pero de esta manera no
-    $form.exito.className=''
+    //$form.exito.className=''
 }
 
 event.preventDefault();
