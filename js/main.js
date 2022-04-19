@@ -44,14 +44,14 @@ const esExito = manejarErrores(errores) === 0
 if(esExito){
     $form.className='oculto'
     //es este de aca si pongo document.querySelector(#exito).className ='' ->si funciona pero de esta manera no
-    $form.exito.className=''
+    document.querySelector("#exito").className=''
 }
 
 event.preventDefault();
 }
 
 function manejarErrores(errores){
-// removerErroresAnteriores()
+removerErroresAnteriores()
 const keys = Object.keys(errores);
 const $errores = document.querySelector('#errores');
 let cantErrores = 0;
@@ -68,10 +68,12 @@ keys.forEach(function(key){
         $errores.appendChild($error);
     }else{
         $form[key].className='';
-        //y aca trato de remover solo los que tienen la clase igual que el key que se la puse anteriormente pero se que hay un error
-        $errores[key].remove()
+        
+        
+        
     };
 });
+
 return cantErrores
 // const errorNombre= errores.nombre
 // const errorCiudad=errores.ciudad
@@ -96,12 +98,12 @@ return cantErrores
 
 }
 
-//  function removerErroresAnteriores (){
-//  const $errores =  document.querySelector('#errores')
-//  while ($errores.firstChild) {
-//     $errores.removeChild($errores.firstChild);
-//    }
+  function removerErroresAnteriores (){
+ const $errores =  document.querySelector('#errores')
+  while ($errores.firstChild) {
+     $errores.removeChild($errores.firstChild);
+    }
 
-//  }
+ }
 const $form = document.querySelector("#carta-a-santa");
 $form.onsubmit = validarFormulario;
