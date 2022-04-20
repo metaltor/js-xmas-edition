@@ -32,7 +32,7 @@ const descripcionRegalo = $form["descripcion-regalo"].value;
 const errorNombre = validarNombre(nombre);
 const errorCiudad = validarCiudad(ciudad);
 const errorDescripcionRegalo =  validarDescripcionRegalo(descripcionRegalo);
-
+event.preventDefault();
 const errores = {
     nombre : errorNombre,
     ciudad : errorCiudad,
@@ -43,10 +43,12 @@ const esExito = manejarErrores(errores) === 0
 
 if(esExito){
     $form.className='oculto'
+    document.querySelector("#exito").className =''
+    redireccionarPagina()
     //es este de aca si pongo document.querySelector(#exito).className ='' ->si funciona pero de esta manera no
     //$form.exito.className=''
 }
-event.preventDefault();
+
 }
 
 function manejarErrores(errores){
@@ -103,6 +105,11 @@ return cantErrores
       $errores.removeChild($errores.firstChild);
      }
 
+  }
+  function redireccionarPagina(){
+    setTimeout(function(){ 
+        window.location.href = "wishlist.html";
+      },3000);
   }
 const $form = document.querySelector("#carta-a-santa");
 $form.onsubmit = validarFormulario;
